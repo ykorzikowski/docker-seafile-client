@@ -65,7 +65,7 @@ setup_lib_sync(){
       LIB_JSON=$(curl -G -H "Authorization: Token $TOKEN" -H 'Accept: application/json; indent=4' ${SERVER_URL}:${SERVER_PORT}/api2/repos/${LIB}/ 2> /dev/null)
       LIB_NAME=$(get name "$LIB_JSON")
       LIB_NAME_NO_SPACE=$(echo $LIB_NAME|sed 's/[ \(\)]/_/g')
-      LIB_DIR=${DATA_DIR}/${LIB_NAME_NO_SPACE}
+      LIB_DIR=${DATA_DIR}
       set +e
       LIB_IN_SYNC=$(echo "$LIBS_IN_SYNC" | grep "$LIB")
       set -e
