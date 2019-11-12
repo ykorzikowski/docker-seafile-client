@@ -1,2 +1,2 @@
 build:
-        docker build -t ykorzikowski/seafile-client .
+	docker build -t ykorzikowski/seafile-client .
